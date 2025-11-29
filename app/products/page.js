@@ -17,10 +17,10 @@ const ProductsPage = async () => {
   const products = data.products;
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div style={{ padding: "20px",background:"#f6cdcdff", borderRadius:"8px"  }}>
       <h1>Products</h1>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "20px" }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "20px",background:"#fc9f9fff", padding:"20px", borderRadius:"8px" }}>
         {products.map((product) => (
           <div key={product.id} style={{ border: "1px solid #ddd", padding: "10px" }}>
             <img src={product.thumbnail} width="100%" />
