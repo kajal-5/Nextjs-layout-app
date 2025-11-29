@@ -1,3 +1,8 @@
 export default function Home() {
-  return <h1>This is the Home Page</h1>;
+  return (
+    <div style={{ padding: "20px" }}>
+      <h1>Welcome to Dummy Products Store</h1>
+      <p>Go to Products to explore all items.</p>
+    </div>
+  );
 }
