@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Providers from "./providers";
 import "./globals.css";
 
 export default function RootLayout({ children }) {
@@ -38,7 +39,8 @@ export default function RootLayout({ children }) {
           </nav>
         </header>
 
-        <main>{children}</main>
+        <main><Providers>{children}</Providers>
+          </main>
       </body>
     </html>
   );
