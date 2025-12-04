@@ -109,6 +109,7 @@
 // };
 
 "use client";
+import LoginForm from "./loginform";
 
 export const dynamic = "force-dynamic"; // Prevent static prerendering
 
@@ -137,46 +138,47 @@ export default function LoginPage() {
   }
 
   return (
-    <div style={containerStyle}>
-      <div style={cardStyle}>
-        <h1 style={{ marginBottom: "20px" }}>Login</h1>
+    // <div style={containerStyle}>
+    //   <div style={cardStyle}>
+    //     <h1 style={{ marginBottom: "20px" }}>Login</h1>
 
-        <form onSubmit={handleLogin}>
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            style={inputStyle}
-            required
-          />
+    //     <form onSubmit={handleLogin}>
+    //       <input
+    //         type="email"
+    //         placeholder="Email"
+    //         value={email}
+    //         onChange={(e) => setEmail(e.target.value)}
+    //         style={inputStyle}
+    //         required
+    //       />
 
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            style={inputStyle}
-            required
-          />
+    //       <input
+    //         type="password"
+    //         placeholder="Password"
+    //         value={password}
+    //         onChange={(e) => setPassword(e.target.value)}
+    //         style={inputStyle}
+    //         required
+    //       />
 
-          <button type="submit" style={buttonStyle}>
-            Login
-          </button>
-        </form>
+    //       <button type="submit" style={buttonStyle}>
+    //         Login
+    //       </button>
+    //     </form>
 
-        {error && (
-          <p style={{ color: "red", marginTop: "15px", fontWeight: "bold" }}>
-            {error}
-          </p>
-        )}
+    //     {error && (
+    //       <p style={{ color: "red", marginTop: "15px", fontWeight: "bold" }}>
+    //         {error}
+    //       </p>
+    //     )}
 
-        <p style={{ marginTop: "20px", fontSize: "14px" }}>
-          Demo Login: <br />
-          <b>abc@gmail.com</b> / <b>abc@1234</b>
-        </p>
-      </div>
-    </div>
+    //     <p style={{ marginTop: "20px", fontSize: "14px" }}>
+    //       Demo Login: <br />
+    //       <b>abc@gmail.com</b> / <b>abc@1234</b>
+    //     </p>
+    //   </div>
+    // </div>
+    <LoginForm />
   );
 }
 
