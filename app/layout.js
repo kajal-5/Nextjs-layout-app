@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Providers from "./providers";
+import HeaderAuthButton from "./HeaderAuthButton";
 import "./globals.css";
 
 export default function RootLayout({ children }) {
@@ -36,7 +37,11 @@ export default function RootLayout({ children }) {
             <Link href="/products" style={{ color: "#fff", textDecoration: "none" }}>
               Products
             </Link>
+            <Link href="/headPhoneProducts" style={{ color: "#fff", textDecoration: "none" }}>
+              HeadPhone Products
+            </Link>
           </nav>
+          <HeaderAuthButton />
         </header>
 
         <main><Providers>{children}</Providers>

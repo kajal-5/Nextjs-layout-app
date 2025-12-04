@@ -12,6 +12,7 @@
 
 
 import Link from "next/link";
+import DashboardPage from './dashboard/page';
 
 export const metadata = {
   title: "This is Homepage",
@@ -20,13 +21,10 @@ export const metadata = {
 
 export default function Home() {
   return (
+
     <main style={{ padding: "40px" }}>
+      {/* <DashboardPage/> */}
       <h1>Home Page</h1>
-      <ul>
-        <li><Link href="/posts/1">Go to Post 1</Link></li>
-        <li><Link href="/posts/2">Go to Post 2</Link></li>
-        <li><Link href="/posts/3">Go to Post 3</Link></li>
-      </ul>
     </main>
   );
 }
