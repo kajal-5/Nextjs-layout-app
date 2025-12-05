@@ -1,10 +1,12 @@
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 const PRODUCT_API = "https://fakestoreapi.com/products";
 
-// ✅ DYNAMIC METADATA (Next 16 Compatible)
 export async function generateMetadata({ params }) {
-  const { id } = await params; // ✅ NEXT 16 requires await
+  const { id } = await params;
 
-  const res = await fetch(`${PRODUCT_API}/${id}`);
+  const res = await fetch(`${PRODUCT_API}/${id}`, { cache: "no-store" });
   const product = await res.json();
 
   return {
@@ -13,11 +15,10 @@ export async function generateMetadata({ params }) {
   };
 }
 
-// ✅ PRODUCT DETAIL PAGE
 export default async function ProductDetailPage({ params }) {
-  const { id } = await params; // ✅ NEXT 16 requires await
+  const { id } = await params;
 
-  const res = await fetch(`${PRODUCT_API}/${id}`);
+  const res = await fetch(`${PRODUCT_API}/${id}`, { cache: "no-store" });
   const product = await res.json();
 
   return (
