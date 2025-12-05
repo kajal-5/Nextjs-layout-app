@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function LoginPage() {
+export default function Login() {
   const [formvalue, setformvalue] = useState({
     email: "",
     password: "",
